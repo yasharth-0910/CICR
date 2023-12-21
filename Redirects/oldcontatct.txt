@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="../assests/CICR logo.png" type="icon">
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="contactform">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name" class="w">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" class="w">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone" class="w">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="query" class="w">Your Query:</label>
+            <textarea id="query" name="query" rows="4" required></textarea>
+
+            <button type="button" onclick="sendEmail()">Submit</button>
+        </form>
+
+        <div id="responseMessage"></div>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            emailjs.init("test.mail.project.code@gmail.com");
+
+            function sendEmail() {
+                var templateParams = {
+                    to_name: document.getElementById("name").value,
+                    from_name: document.getElementById("email").value,
+                    phone: document.getElementById("phone").value,
+                    message: document.getElementById("query").value,
+                };
+
+                emailjs.send("service_1o045yj", "template_07m9z5z", templateParams)
+                    .then(function(response) {
+                        console.log("Email sent successfully:", response);
+                        document.getElementById("responseMessage").innerHTML = "Thank you! Your form has been submitted.";
+                    }, function(error) {
+                        console.log("Email sending failed:", error);
+                        document.getElementById("responseMessage").innerHTML = "Error: Unable to submit the form. Please try again later.";
+                    });
+            }
+        </script>     
+    </div>
+
+</body>
+</html>
+
+
+
+CSS
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+
+.contactform {
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: 'Dosis', sans-serif; 
+}
+
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #05c9bf;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #00020373;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007bb5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.contactform {
+    background-image: url('../assests/rob.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.contactform form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(33, 109, 120, 0.584);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.w{
+    color: whitesmoke;
+}
+
+.contactform form:hover {
+    box-shadow: 0 0 30px rgba(50, 99, 224, 0.585); /* Change shadow on hover */
+}
+
+
