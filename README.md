@@ -26,4 +26,4 @@ This is a Side project, I took while learning Web-Development currently I have u
 
 <hr>
 <br>
-<p>Made with love by Yasharth Singh</p>
+<p>Made with ❤️ by Yasharth Singh</p>
