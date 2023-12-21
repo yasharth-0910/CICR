@@ -1,0 +1,25 @@
+/* ... (previous styles) */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 10px 20px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.made-by {
+    color: white;
+}
+
+/* ... (remaining styles) */

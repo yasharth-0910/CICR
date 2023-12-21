@@ -1,0 +1,130 @@
+.entire{
+    background-image: url(../assests/geo.jpg);
+    background-size: cover;
+    background-position:  center ;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.gal {
+    justify-content: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    height: 120px;
+    width: 100%;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider {
+    position: relative;
+    height: 400px;
+}
+
+.slider img {
+    display: none;
+    width: auto;
+    height: 100%;
+    max-width: 75%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.slider img.active {
+    display: block;
+    opacity: 1;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.25rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+    margin-right: 5px;
+}
+
+.slider-nav a:last-child {
+    margin-right: 0;
+}
+
+.entire {
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.footer {
+    padding: 0.5rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 2; 
+    background-color: black;
+    color: white;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 10px 20px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.made-by {
+    color: white;
+}
+.social-links {
+    display: flex;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-link:hover {
+    text-decoration: none;
+    color: #00abf0; 
+    transform: translateY(-3px); 
+}
+
+.made-by {
+    color: white;
+}

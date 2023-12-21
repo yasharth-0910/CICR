@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICR</title>
+    <link rel="icon" href="./assests/CICR logo.png" type="icon">
+    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+</head>
+<body>
+    <div class="background-image-part">
+        <header class="header" id="header">
+            <a href="https://www.jiit.ac.in/" target="_blank"><img class="logo" src="./assests/JIIT Logo(White).png"></a>
+            <nav class="navbar">
+                <a href="javascript:void(0);" onclick="scrollToSection('About-us')" style="color: #00abf0;">About Us</a>
+                <a href="./Redirects/projects.html" target="_blank">Projects</a>
+                <a href="./Redirects/gallery.html" target="_blank">Gallery</a>
+                <a href="./Redirects/alumni.html" target="_blank">Events</a>
+                <a href="./Redirects/contact.html" target="_blank">Contact</a>
+            </nav>
+        </header>
+        <script>
+            function scrollToSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section) {
+                    var offsetTop = section.offsetTop;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+
+            window.addEventListener("scroll", function () {
+                var header = document.getElementById("header");
+                var navbar = document.querySelector(".navbar");
+                var aboutUsSection = document.querySelector("#about"); 
+                var scrolled = window.scrollY > 0;
+      
+                header.classList.toggle("scrolled", scrolled);
+                navbar.classList.toggle("scrolled", scrolled);
+      
+                var aboutUsSectionTop = aboutUsSection.offsetTop;
+                var aboutUsSectionHeight = aboutUsSection.offsetHeight;
+                var isPastAboutUs =
+                  window.scrollY > aboutUsSectionTop + aboutUsSectionHeight;
+      
+                navbar.classList.toggle("past-about-us", isPastAboutUs);
+                
+                var isPastAboutUsText =
+                  window.scrollY > aboutUsSectionTop;
+      
+                navbar.classList.toggle("past-about-us-text", isPastAboutUsText);
+            });
+        </script>
+        <section class="home">
+            <div class="logo-container">
+                <img class="logo-cicr" src="./assests/CICR_logo-removebg-preview (1).png">
+                <div class="logo-text">
+                    <h1 style="padding: 0px 150px 0 0px";>CICR</h1>
+                    <br>
+                    <p >Promoting Technology, Creativity and Innovation</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--
+        About us will contain motto of CICR
+    -->
+    <div class="About-us" id="About-us">
+        <h1 class="us">About Us</h1>
+        <p class="motto">Welcome to the Creative & Innovative Cell in Robotics (CICR) Club at JIIT-128! We're on a mission to revolutionize robotics and tackle real-world challenges. As a collaborative hub, we bring together students passionate about mechanical, electronic, and software design. From autonomous bots to aerial vehicles, our projects aim to create solutions with a positive impact. Whether you're a seasoned roboticist or a newcomer, CICR welcomes all students, emphasizing technical growth and essential interpersonal skills. No prior robotics experience is needed—just bring your enthusiasm, and the club will guide you. CICR fosters an environment that encourages sharing wisdom and experiences. If you dream of designing circuits or controlling your bot, CICR is where dreams become reality. Join us on a transformative journey of exploration, creativity, and problem-solving. Welcome to CICR—where passion meets purpose, and innovation knows no limits!</p>
+        <hr class="hm" width="10%">
+    </div>
+    
+    <!--
+        Core Members will be shown in Attractive way uisng(Currently thinking of possible ways)
+    -->
+    <div class="team">
+        <h1 class="meet">The Team</h1>
+        <hr class="ic">
+        <h3 class="core">Meet our Core Team</h3>
+    </div>
+    <div class="core-members">
+
+        <div class="team-card">
+            <div class="member-image">
+                <img src="./assests/KunwarAdityaSingh(Management Head).png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <h4>Kunwar Aditya Singh</h4>
+                <p>Management Head</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><img src="./assests/mail.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/linkedin_logo.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/github_icon.png" style="height: 20px; width: 20px;"></a>
+                </div>
+            </div>
+        </div>
+    
+ 
+        <div class="team-card">
+            <div class="member-image">
+                <img src="./assests/AnshulMaurya(Tech head).png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <h4>Anshul Maurya</h4>
+                <p>Tech Head</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><img src="./assests/mail.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/linkedin_logo.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/github_icon.png" style="height: 20px; width: 20px;"></a>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="team-card">
+            <div class="member-image">
+                <img src="./assests/PrakherVerma(Graphic and Social Media head).png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <h4>Prakhar Verma</h4>
+                <p>Graphic and Social Media head</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><img src="./assests/mail.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/linkedin_logo.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/github_icon.png" style="height: 20px; width: 20px;"></a>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="team-card">
+            <div class="member-image">
+                <img src="./assests/PranayRai(PR head).png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <h4>Pranay Rai</h4>
+                <p>PR Head</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><img src="./assests/mail.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/linkedin_logo.png" style="height: 20px; width: 20px;"></a>
+                    <a href="#" target="_blank"><img src="./assests/github_icon.png" style="height: 20px; width: 20px;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="made-by">MADE WITH ❤️ BY YASHARTH SINGH</p>
+            <div class="link">
+                <a href="https://www.linkedin.com/in/yasharth-singh-b2493b284/" target="_blank" class="social-link">Linkedin</a>
+                <a href="https://github.com/yasharth-0910" target="_blank" class="social-link">Github</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="social-bar">
+        <a href="https://www.facebook.com/cicr128/" target="_blank" class="social-icon"><img src="./assests/facebook_icon.png" style="height: 25px; width:25px" alt="Facebook"></a>
+        <a href="https://www.instagram.com/cicr_jiit/?hl=en" target="_blank" class="social-icon"><img src="./assests/instagram_logo.png" style="height: 25px; width:25px" alt="Instagram"></a>
+        <a href="https://twitter.com/cicr" target="_blank" class="social-icon"><img src="./assests/twitter_logo.png" style="height: 25px; width:25px" alt="Twitter"></a>
+    </div>
+    
+        
+</body>
+</html>
