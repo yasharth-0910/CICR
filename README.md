@@ -18,7 +18,7 @@ This is a Side project, I took while learning Web-Development currently I have u
 
 <b>1.Aman Raj:</b> <a href="https://github.com/amancodes8">  Github</a> <a href="https://www.linkedin.com/in/aman-raj-1a318128a/"> Linkedin</a>
 <br>
-<b>2.Vimarsh Mishra:</b> <a href="#">  Github</a> <a href="https://github.com/vimarshmishra37"> Linkedin</a>
+<b>2.Vimarsh Mishra:</b> <a href="https://github.com/vimarshmishra37">  Github</a> <a href="https://www.linkedin.com/in/vimarsh-mishra-752553240/"> Linkedin</a>
 
 
 <h2>Site Purpose </h2>
